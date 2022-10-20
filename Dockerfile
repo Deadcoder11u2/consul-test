@@ -1,2 +1,3 @@
 FROM consul:latest
+ARG CONSUL_HTTP_ADDR=0.0.0.0:80
 EXPOSE 8500/tcp
