@@ -18,12 +18,12 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: ./gradlew build --scan -s
+          command: chmod +x ./gradlew && ./gradlew build --scan -s
 
 # Invoke jobs via workflows
 # See: https://circle
 workflows:
   checkout-build-test:
     jobs:
-      - gradle/test
+      - say-hello
         # ci.com/docs/2.0/configuration-reference/#workflows
