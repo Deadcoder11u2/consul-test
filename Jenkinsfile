@@ -1,17 +1,17 @@
 pipeline {
-    agent any
-
+  agent any
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building'
-                sh 'gradle build'
-            }
+      stage('Build') {
+        steps {
+          echo 'Building'
+            sh 'echo HELLO WORLD'
         }
-        stage('Deploy') {
-            steps {
-                echo "Deployin"
-            }
+      }
+      stage('Deploy') {
+        steps {
+          echo "Deploying"
+            sh 'echo HELLO WORLD DEPLOY'
         }
+      }
     }
 }
