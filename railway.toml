@@ -1,0 +1,7 @@
+[build]
+buildCommand="echo Dockerfile Building..."
+builder="dockerfile"
+
+
+[deploy]
+startCommand="echo starting"
