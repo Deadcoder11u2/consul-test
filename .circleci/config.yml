@@ -18,11 +18,12 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: sudo ./gradlew build --scan -s
+          command: ./gradlew build --scan -s
 
 # Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+# See: https://circle
 workflows:
-  say-hello-workflow:
+  checkout-build-test:
     jobs:
-      - say-hello
+      - gradle/test
+        # ci.com/docs/2.0/configuration-reference/#workflows
