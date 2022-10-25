@@ -10,7 +10,7 @@ pipeline {
       stage('Deploy') {
         steps {
           echo "Deploying"
-            sh 'echo HELLO WORLD DEPLOY'
+            sh 'chmod +x gradlew && ./gradlew test --scan -s'
         }
       }
     }
