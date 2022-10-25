@@ -18,11 +18,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World!"
-  gradle/test:
-    store_artifcats: build/reports
-    test_command: test
-    test_results_path: build/test-results/
+          command: ./gradlew build --scan -s
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -30,4 +26,3 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-      - gradle/test
